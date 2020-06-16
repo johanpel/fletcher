@@ -55,6 +55,8 @@ jobs:
         source: examples/stringwrite/hardware
       sum:
         source: examples/sum/hardware
+      nullable:
+        source: examples/nullable-sum/hardware
       primmap:
         source: codegen/test/primmap
       stringread:

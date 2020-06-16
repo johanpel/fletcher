@@ -1,0 +1,14 @@
+recordbatch.rb
+recordbatch.srec
+schema.as
+vhdl/*
+dot/*
+work/*
+!vhdl/Sum.vhd
+.ipynb_checkpoints
+vsim.do
+transcript
+*.cf
+vhdmmio-doc/*
+fletchgen.mmio.yaml
+*.srec
