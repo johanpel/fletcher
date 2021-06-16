@@ -51,6 +51,7 @@ cdef class Context():
             record_batch : Arrow RecordBatch to queue
             memtype (str): Memory type: - 'any' results in least effort to make data available to FPGA (depending on the platform implementation).
                                         - 'cache' force copy to accelerator on-board DRAM memory, if available.
+                                        - 'alloc_only' force allocation on accelerator on-board DRAM memory (if available), but don't copy.
 
         """
         
@@ -60,6 +61,8 @@ cdef class Context():
             queue_mem_type = MemType.ANY
         elif mem_type == "cache":
             queue_mem_type = MemType.CACHE
+        elif mem_type == "alloc_only":
+            queue_mem_type = MemType.ALLOC_ONLY
         else:
             raise ValueError("mem_type argument can be only 'any' or 'cache'")
         

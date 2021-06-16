@@ -49,7 +49,18 @@ enum class MemType {
    * Selecting CACHE may result in higher performance if there is data reuse by the kernel, but may result in lower
    * performance if the data is not reused by the kernel (for example fully streamable kernels).
    */
-      CACHE
+      CACHE,
+
+  /**
+   * @brief Allocate a buffer for the data on the on-board memory of the device, but don't copy the buffer contents to it.
+   *
+   * If available, this forces a buffer to be allocated on device on-board memory (e.g. some seperate DRAM chips sitting
+   * on the accelerator PCB next to the FPGA, but it could be HBM on top of the FPGA fabric in the same chip, or
+   * BRAM. This depends on the platform). However, the data currently in the provided buffer is not copied to the device;
+   * the device memory is left uninitialized. This is useful for output buffers, or if you want to handle initialization
+   * manually.
+   */
+      ALLOC_ONLY
 };
 
 /// A buffer on the device

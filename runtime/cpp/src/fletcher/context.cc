@@ -67,6 +67,10 @@ Status Context::Enable() {
                                               device_buf.size);
           // Cache always allocates on device.
           device_buf.was_alloced = true;
+        } else if (type == MemType::ALLOC_ONLY) {
+          status = platform_->DeviceMalloc(&device_buf.device_address,
+                                           device_buf.size);
+          device_buf.was_alloced = true;
         } else {
           status = Status::ERROR("Invalid / unsupported MemType.");
         }

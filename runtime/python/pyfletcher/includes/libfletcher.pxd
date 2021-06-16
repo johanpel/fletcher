@@ -37,8 +37,9 @@ cdef extern from "fletcher/arrow-utils.h" namespace "fletcher":
 
 cdef extern from "fletcher/context.h" namespace "fletcher":
     cdef enum MemType:
-        ANY   "fletcher::MemType::ANY",
-        CACHE "fletcher::MemType::CACHE"
+        ANY         "fletcher::MemType::ANY",
+        CACHE       "fletcher::MemType::CACHE"
+        ALLOC_ONLY  "fletcher::MemType::ALLOC_ONLY"
   
 
 cdef extern from "fletcher/api.h" namespace "fletcher" nogil:
