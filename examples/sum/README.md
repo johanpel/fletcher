@@ -11,7 +11,7 @@ open-source tools.
 The examples in this part of the tutorial are written in Python, so you'll need
 
 - Install [Python 3.6+](https://www.python.org/).
-- Install [PyArrow 3.0+](https://arrow.apache.org/docs/python/).
+- Install [PyArrow 4.0+](https://arrow.apache.org/docs/python/).
 
 Furthermore you'll need to build and install Fletchgen - the Fletcher design
 generator tool.

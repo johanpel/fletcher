@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  ARROW_VERSION: '3.0.0'
+  ARROW_VERSION: '4.0.1'
 
 jobs:
   cpp:
@@ -24,8 +24,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install Apache Arrow
       run: |
-        wget https://apache.bintray.com/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-archive-keyring-latest-$(lsb_release --codename --short).deb
-        sudo apt-get install -y ./apache-arrow-archive-keyring-latest-$(lsb_release --codename --short).deb
+        wget https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
+        sudo apt-get install -y ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
         sudo apt-get update
         sudo apt-get install -y libarrow-dev=$ARROW_VERSION-1
     - name: Configure
@@ -56,8 +56,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install Apache Arrow
       run: |
-        wget https://apache.bintray.com/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-archive-keyring-latest-$(lsb_release --codename --short).deb
-        sudo apt-get install -y ./apache-arrow-archive-keyring-latest-$(lsb_release --codename --short).deb
+        wget https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
+        sudo apt-get install -y ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
         sudo apt-get update
         sudo apt-get install -y libarrow-dev=$ARROW_VERSION-1 libarrow-python-dev=$ARROW_VERSION-1
     - uses: actions/setup-python@v2

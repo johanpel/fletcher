@@ -47,7 +47,7 @@ the "Hello, world!" example project [that you can find here](../examples/sum):
 
 All Fletcher hardware streams follow a ready-valid handshaking protocol similar
 to AXI4. You can ready about that protocol
-[here](https://static.docs.arm.com/ihi0051/a/IHI0051A_amba4_axi4_stream_v1_0_protocol_spec.pdf).
+[here](https://developer.arm.com/documentation/ihi0051/a).
 If you fail to adhere to this protocol, you **will** end up with erroneous
 designs. If you have never worked with a valid-ready handshaked streaming
 protocol before, it is highly recommended to read and **fully understand** the

@@ -37,7 +37,7 @@ It currently supports only two top-level platforms.
 # Prerequisites
 
 - [C++17 compliant compiler](https://clang.llvm.org/)
-- [Apache Arrow 3.0+](https://github.com/apache/arrow)
+- [Apache Arrow 4.0+](https://github.com/apache/arrow)
 - [CMake 3.14+](https://cmake.org/)
 
 # Build & install

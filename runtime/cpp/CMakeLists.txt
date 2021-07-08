@@ -7,7 +7,7 @@ project(fletcher
   LANGUAGES CXX
 )
 
-find_package(Arrow 3.0.0 CONFIG REQUIRED)
+find_package(Arrow 4.0.1 CONFIG REQUIRED)
 
 include(FetchContent)
 
@@ -102,14 +102,14 @@ set(CPACK_PACKAGE_VERSION_PATCH "${fletcher_VERSION_PATCH}")
 set(CPACK_PACKAGE_RELOCATABLE ON)
 
 set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libarrow-dev (>= 3.0.0), libarrow-dev (<< 4.0.0)")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libarrow-dev (>= 3.0.0), libarrow-dev (<< 5.0.0)")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "${CPACK_PACKAGE_VENDOR}")
 
 set(CPACK_RPM_FILE_NAME "RPM-DEFAULT")
 set(CPACK_RPM_PACKAGE_DESCRIPTION "${CPACK_PACKAGE_DESCRIPTION}")
 set(CPACK_RPM_PACKAGE_LICENSE "ASL 2.0")
 # fletcher-devel
-set(CPACK_RPM_PACKAGE_REQUIRES "arrow-devel >= 3.0.0, arrow-devel < 4.0.0")
+set(CPACK_RPM_PACKAGE_REQUIRES "arrow-devel >= 3.0.0, arrow-devel < 5.0.0")
 
 set(CPACK_ARCHIVE_LIBRARY_FILE_NAME "${CMAKE_PROJECT_NAME}-${fletcher_VERSION}-${CMAKE_SYSTEM_NAME}")
 
